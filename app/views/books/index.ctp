@@ -1,14 +1,10 @@
-<table>
-    <thead>
-        <th>ISBN</th>
-        <th>Title</th>
-        <th>Author</th>
-    </thead>
-    <?php foreach($books as $book): ?>
-        <tr>
-            <td><?php echo $book['Book']['isbn'] ?></td>
-            <td><?php echo $book['Book']['title'] ?></td>
-            <td><?php echo $book['Author']['name'] ?></td>
-        </tr>
-    <?php endforeach; ?>
-</table>
+<?php foreach($books as $book): ?>
+    <h2><?php echo $book['Book']['title'] ?></h2>
+    <hr />
+    <h3>Author(s):</h3>
+    <ul>
+        <?php foreach($book['Author'] as $author): ?>
+            <li><?php echo $author['name'] ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endforeach; ?>
