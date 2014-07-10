@@ -6,7 +6,6 @@ class Book extends AppModel {
           'className' => 'Author'
       )
     );
-    //have been suppressed
-//    var $scaffold;
+
 
 }
